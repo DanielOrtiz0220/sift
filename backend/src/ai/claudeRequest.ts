@@ -1,26 +1,25 @@
 import { ChatAnthropicMessages } from "@langchain/anthropic";
 import dotenv from 'dotenv'
 
-dotenv.config({ path: '.env' })
+dotenv.config()
 
-const modelOutput = async () => {
+const modelOutput = async (prompt: string) => {
   const model = new ChatAnthropicMessages({
   apiKey: process.env.ANTHROPIC_API_KEY,
+  model: "claude-3-5-sonnet-20240620",
 });
 
 
 try{
-  const response = await model.invoke("Hello world!");
-  return response 
+  const response = await model.invoke(prompt);
+  return response.content
 }
 catch (error){
-  if (error){
-    console.log(error)
-  }
+  console.log(error)
 }
 }
 
-modelOutput().then(result => console.log(result))
+export { modelOutput };
 
 
 
