@@ -55,7 +55,7 @@ Sift is a powerful document search and summarization tool that leverages AI to h
 1. Start the backend server:
    ```
    cd backend/src
-   npx node-ts api/api.ts
+   npx ts-node api/api.ts
    ```
 
 2. In a new terminal, start the frontend development server:
