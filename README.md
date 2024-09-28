@@ -19,8 +19,8 @@ Sift is a powerful document search and summarization tool that leverages AI to h
 ## Prerequisites
 - Node.js (v14 or later)
 - npm (v6 or later)
-- Google Cloud Platform account with Drive API enabled
-- Anthropic API key for Claude AI
+- Google Cloud Platform account with Drive API enabled https://console.cloud.google.com/welcome?supportedpurview=project
+- Anthropic API key for Claude AI https://console.anthropic.com/login?returnTo=/?
 
 ## Installation
 

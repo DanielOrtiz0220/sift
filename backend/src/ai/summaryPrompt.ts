@@ -1,7 +1,7 @@
 import { modelOutput } from "./claudeRequest";
 
 export async function summaryPrompt(query: string, files: any[]) {
-  const fileDescriptions = files.map(file => `- ${file.title}: ${file.url}`).join('\n');
+  const fileDescriptions = files.map(file => `- ${file.title}`).join('\n');
 
 
 /* TODO: Prompt improvements:
@@ -20,9 +20,10 @@ Please provide a summary of these documents and their potential content, focusin
 1. Briefly describe what each document might contain based on its title.
 2. Explain how the documents might be relevant to the user's query.
 3. Suggest potential connections or themes across the documents.
-4. Cite the documents using their URLs when referencing specific information.
 
 Your summary should be concise yet informative, helping the user understand the potential relevance of these documents to their query.
+
+Above all, be concise and to the point. Only a short paragraph is needed, do not include urls or any other external links.
 
 Here's an example of what the summary should look like:
 

@@ -11,15 +11,15 @@ export async function searchHandler(req: Request, res: Response) {
 
     console.log(files);
 
-    const topDocuments = files.map((file: { name: string; webViewLink: string }) => ({
+    const topDocuments: { title: string; url: string }[] = files.map((file: { name: string; webViewLink: string }) => ({
       title: file.name,
       url: file.webViewLink,
     }));
 
-    const mockSummary = await summaryPrompt(query, topDocuments);
+    const Summary = await summaryPrompt(query, topDocuments);
 
     res.json({
-      summary: mockSummary,
+      summary: Summary,
       topDocuments: topDocuments
     });
   } catch (error) {
