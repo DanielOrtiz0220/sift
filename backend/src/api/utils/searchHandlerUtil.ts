@@ -6,6 +6,7 @@ export async function searchHandler(req: Request, res: Response) {
   const { query } = req.params;
   
   try {
+    console.log("search query: ", query);
     const files = await searchDrive(query);
 
     console.log(files);

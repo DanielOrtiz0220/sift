@@ -18,9 +18,8 @@ export async function searchDrive(query: string) {
   }
 
   // temp query for testing
-  const testquery = "programmer";
   const searchResponse = await driveClient.files.list({
-    q: `fullText contains '${testquery}'`,
+    q: `fullText contains '${query}'`,
     fields: "files(id, name, webViewLink)",
     pageSize: 10,
   });

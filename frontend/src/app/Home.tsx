@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { Input } from "../components/input"
 import { Button } from "../components/button"
 import { Card, CardContent } from "../components/card"
@@ -10,20 +9,19 @@ export default function Home() {
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
-
-  const handleSearch = async () => {
-    const results = await searchHandler(searchQuery);
-    setSearchResults(results);
-  };
-  
   // hide the search summary component until the search results are returned
   const [showSearchSummary, setShowSearchSummary] = useState<boolean>(false);
 
-  useEffect(() => {
-    if (searchResults.length > 0) {
-      setShowSearchSummary(true);
-    }
-  }, [searchResults]);
+  const handleSearch = async () => {
+    console.log("search query: ", searchQuery);
+    console.log("process started");
+
+    const results = await searchHandler(searchQuery);
+    setSearchResults(results);
+    setShowSearchSummary(true);
+
+    console.log(results);
+  };
 
 
    
@@ -51,6 +49,11 @@ export default function Home() {
             placeholder="Search..." 
             className="pl-10 pr-4 py-2 w-full bg-white text-gray-800 placeholder-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
             onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleSearch();
+              }
+            }}
           />
         </div>
 
