@@ -26,15 +26,16 @@ Sift is a powerful document search and summarization tool that leverages AI to h
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/sift.git
+   git clone https://github.com/danielortiz0220/sift.git
    cd sift
    ```
 
 2. Install dependencies for both frontend and backend:
    ```
-   cd frontend
+   npm install --save-dev @types/qs
+   cd frontend/src
    npm install
-   cd ../backend
+   cd ../backend/src
    npm install
    ```
 
@@ -54,7 +55,7 @@ Sift is a powerful document search and summarization tool that leverages AI to h
 1. Start the backend server:
    ```
    cd backend/src
-   node-ts api/api.ts
+   npx node-ts api/api.ts
    ```
 
 2. In a new terminal, start the frontend development server:
