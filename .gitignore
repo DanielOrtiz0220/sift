@@ -2,12 +2,14 @@
 
 # dependencies
 
+/backend/src/token.json
 /frontend/node_modules
 /backend/src/node_modules
 /core/node_modules
 /frontend/build
 /.pnp
 .pnp.js
+
 
 # testing
 /coverage
