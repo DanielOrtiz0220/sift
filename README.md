@@ -1,6 +1,6 @@
 # Sift
 
-Sift is a powerful document search and summarization tool that leverages AI to help users quickly find and understand relevant information across multiple documents.
+Sift is a document search and summarization tool that leverages LLMs to help users quickly find and understand relevant information across multiple integrations.
 
 ## Table of Contents
 - [Features](#features)
@@ -40,7 +40,7 @@ Sift is a powerful document search and summarization tool that leverages AI to h
    ```
 
 3. Set up environment variables:
-   Create a `.env` file in the `backend/src` directory with the following content:
+   Create a `.env` file in the `backend` directory with the following content:
    ```
    ANTHROPIC_API_KEY=your_anthropic_api_key
    GOOGLE_CLIENT_ID=your_google_client_id
