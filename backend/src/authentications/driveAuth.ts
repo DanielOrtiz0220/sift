@@ -3,7 +3,7 @@ import { writeFile, readFile } from 'fs/promises';
 import { createServer } from 'http';
 import { parse as parseUrl } from 'url';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({path: '../.env'});
 
 const SCOPES = ['https://www.googleapis.com/auth/drive.readonly'];
 const TOKEN_PATH = 'token.json';
