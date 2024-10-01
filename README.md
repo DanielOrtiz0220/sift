@@ -35,7 +35,7 @@ Sift is a document search and summarization tool that leverages LLMs to help use
    npm install --save-dev @types/qs
    cd frontend/src
    npm install
-   cd ../backend/src
+   cd ../../backend/src
    npm install
    ```
 
@@ -74,6 +74,11 @@ Sift is a document search and summarization tool that leverages LLMs to help use
 - `backend/`: Express.js server
   - `src/api/`: API routes and handlers
   - `src/ai/`: AI-related functionality (Claude integration)
+
+
+## Example
+
+![example](sift.png)
 
 ## Contributing
 
